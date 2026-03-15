@@ -1,0 +1,39 @@
+{
+  "name": "sigil-protocol",
+  "version": "1.0.0",
+  "description": "Sigil: Adversarial Verification of Risk Detection via Cryptoeconomic Reasoning Bonds",
+  "author": "Frédéric David Blum & Claude Opus 4.6",
+  "license": "MIT",
+  "homepage": "https://github.com/davidangularme/sigil-protocol",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidangularme/sigil-protocol.git"
+  },
+  "keywords": [
+    "adversarial-verification",
+    "risk-detection",
+    "reasoning-bonds",
+    "cryptoeconomic",
+    "AI-agent",
+    "cybersecurity",
+    "ethereum",
+    "base-mainnet",
+    "smart-contracts",
+    "decision-traces"
+  ],
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.js",
+    "deploy:base-sepolia": "hardhat run scripts/deploy.js --network baseSepolia",
+    "deploy:base": "hardhat run scripts/deploy.js --network base",
+    "demo:local": "DEMO=true hardhat run scripts/deploy.js",
+    "coverage": "hardhat coverage",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.22.0"
+  }
+}
