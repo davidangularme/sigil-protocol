@@ -2,7 +2,7 @@
 
 **Adversarial Verification of Risk Detection via Cryptoeconomic Reasoning Bonds**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19027462.svg)](https://doi.org/10.5281/zenodo.19027462)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.24-363636.svg)](https://soliditylang.org/)
 [![Base Mainnet](https://img.shields.io/badge/Base-Mainnet-0052FF.svg)](https://basescan.org/)
@@ -66,11 +66,14 @@ npm install
 # Compile
 npm run compile
 
-# Test (50+ tests)
+# Test (75 tests)
 npm test
 
 # Deploy locally with demo
 npm run demo:local
+
+# Run full lifecycle demo (all 5 mechanisms, 11 steps)
+npm run demo:lifecycle
 
 # Deploy to Base Sepolia
 BASE_SEPOLIA_RPC_URL=<url> PRIVATE_KEY=<key> npm run deploy:base-sepolia
@@ -86,8 +89,10 @@ contracts/
   SigilProtocol.sol     # Main contract: traces, duels, decay, corroboration, inverse bonds
 scripts/
   deploy.js             # Deployment + optional demo
+  demo-lifecycle.js     # 11-step interactive demo (all 5 mechanisms)
+  deploy-base-sepolia.sh # Sepolia deployment guide
 test/
-  SigilProtocol.test.js # Comprehensive test suite
+  SigilProtocol.test.js # 75 tests covering all mechanisms
 ```
 
 ## Contract Interface
@@ -167,7 +172,7 @@ function getReputationScore(address _agent) external view returns (int256);
   author={Blum, Frédéric David and Claude Opus 4.6},
   year={2026},
   publisher={Zenodo},
-  doi={10.5281/zenodo.XXXXXXX}
+  doi={10.5281/zenodo.19027462}
 }
 
 @misc{blum2026cortex,
